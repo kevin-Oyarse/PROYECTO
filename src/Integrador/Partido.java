@@ -3,12 +3,12 @@ package Integrador;
 public class Partido {
 // Variables para los equipos y los goles respectivos
 	private Equipos equipo1;
-	private Equipo equipo2;
+	private Equipos equipo2;
 	private int golesEquipo1;
 	private int golesEquipo2;
 
 // un constructor para los partidos. Toma 2 equipos y los respectivos goles.
-public Partido(Equipo unEquipo, Equipo otroEquipo, int unosGoles, int otrosGoles) 
+public Partido(Equipos unEquipo, Equipos otroEquipo, int unosGoles, int otrosGoles) 
 {
     equipo1 = unEquipo;
     equipo2 = otroEquipo;
@@ -17,47 +17,47 @@ public Partido(Equipo unEquipo, Equipo otroEquipo, int unosGoles, int otrosGoles
 }
 
 // un metodo que retorna un resultado. pasandole un equipo.
-public ResultadoEnum resultado(Equipo unEquipo) 
+public ResultadoFinal resultado(Equipos unEquipo) 
 {	
     if(unEquipo.nombre().equals(equipo1.nombre())) 
     {
         if(golesEquipo1 > golesEquipo2) 
         {
-            return ResultadoEnum.GANADOR;
+            return ResultadoFinal.GANADOR;
         }
         else if(golesEquipo2 > golesEquipo1) 
         {
-            return ResultadoEnum.PERDEDOR;
+            return ResultadoFinal.PERDEDOR;
         }
         else 
         {
-            return ResultadoEnum.EMPATE;
+            return ResultadoFinal.EMPATE;
         }
     }
     else 
     {
         if(golesEquipo1 > golesEquipo2) 
         {
-            return ResultadoEnum.PERDEDOR;
+            return ResultadoFinal.PERDEDOR;
         }
         else if(golesEquipo2 > golesEquipo1) 
         {
-            return ResultadoEnum.GANADOR;
+            return ResultadoFinal.GANADOR;
         }
         else 
         {
-            return ResultadoEnum.EMPATE;
+            return ResultadoFinal.EMPATE;
         }
     }
 }
 
 // Getters:
-public Equipo equipo1() 
+public Equipos equipo1() 
 {
     return equipo1;
 }
 
-public Equipo equipo2() 
+public Equipos equipo2() 
 {
     return equipo2;
 }
