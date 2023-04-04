@@ -2,12 +2,12 @@ package Integrador;
 
 public class Pronosticos {
     // variables partido, equipo y un resultado del enumerado.
-	private Partidos partido;
+	private Partido partido;
 	private Equipos equipo;
 	private ResultadoFinal resultado;
 	
 	// un constructor para el pronostico
-	public Pronosticos(Partidos unPartido, Equipos unEquipo, ResultadoFinal unResultado) 
+	public Pronosticos(Partido unPartido, Equipos unEquipo, ResultadoFinal unResultado) 
 	{
 		partido = unPartido;
 		equipo = unEquipo;
@@ -32,7 +32,7 @@ public class Pronosticos {
 	
 	// Getters
 	
-	public Partidos partido() 
+	public Partido partido() 
 	{
 		return partido;
 	}
